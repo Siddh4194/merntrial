@@ -5,7 +5,7 @@ import { useState } from 'react';
 function App() {
   const [result,setResult] = useState('');
   function fetchInfo() {
-    fetch("http://localhost:4000/api/test",{
+    fetch(`${process.env.REACT_APP_API_URL}/test`,{
       method: 'GET',
       headers: {'Content-Type': 'application/json'},
     })
